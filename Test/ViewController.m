@@ -17,6 +17,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //测试------第一步info-urltype增加scheme ---prefs
+    UIButton *setting = [[UIButton alloc] initWithFrame:CGRectMake(100, 50, 100, 100)];
+    [setting setTitle:@"设置" forState:UIControlStateNormal];
+    [setting setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [setting addTarget:self action:@selector(gotoSetting) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:setting];
+    
+    
+}
+//第二部
+- (void)gotoSetting
+{
+//    跳转app设置
+    NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    
+    if([[UIApplication sharedApplication] canOpenURL:url]) {
+        
+        NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];           [[UIApplication sharedApplication] openURL:url];
+        
+    }
+    
+    //系统设置
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=INTERNET_TETHERING"]];
+    //跳转WIFI
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+    
+
+    //蓝牙
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Bluetooth"]];
+  
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Safari"]];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
