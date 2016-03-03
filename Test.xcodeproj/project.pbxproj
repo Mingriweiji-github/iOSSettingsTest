@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					04F5F39B1C1D5C6A0028EFA2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 43HASGR2G3;
 					};
 					04F5F3B41C1D5C6A0028EFA2 = {
 						CreatedOnToolsVersion = 7.2;
@@ -413,6 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.airmeida.net.cn.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.airmeida.net.cn.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";

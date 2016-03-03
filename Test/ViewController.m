@@ -28,28 +28,32 @@
     
     
 }
-//第二部
+//第二步
 - (void)gotoSetting
 {
 //    跳转app设置
-    NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+//    NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+//    
+//    if([[UIApplication sharedApplication] canOpenURL:url]) {
+//        
+//        NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];
+//        
+//        [[UIApplication sharedApplication] openURL:url];
+//        
+//    }
     
-    if([[UIApplication sharedApplication] canOpenURL:url]) {
-        
-        NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];           [[UIApplication sharedApplication] openURL:url];
-        
-    }
-    
-    //系统设置
+    //跳转设置
 //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=INTERNET_TETHERING"]];
+    
     //跳转WIFI
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
     
 
     //蓝牙
 //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Bluetooth"]];
-  
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Safari"]];
+    
+  //Safari浏览器
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Safari"]];
     
     
 }
