@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIWebViewDelegate>
 
 @end
 
@@ -22,11 +22,29 @@
     UIButton *setting = [[UIButton alloc] initWithFrame:CGRectMake(100, 50, 100, 100)];
     [setting setTitle:@"设置" forState:UIControlStateNormal];
     [setting setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [setting addTarget:self action:@selector(gotoSetting) forControlEvents:UIControlEventTouchUpInside];
+    [setting addTarget:self action:@selector(gotoWeChat) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:setting];
     
     
+
+    
+    
+}
+
+- (void)gotoWeChat
+{
+    //测试二部曲
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+    NSURL *url = [NSURL URLWithString:@"weixin://qr/JnXv90fE6hqVrQOU9yA0"];
+    
+    //weixin://qr/JnXv90fE6hqVrQOU9yA0
+    //mqq://im/chat?chat_type=wpa&uin=869918615&version=1&src_type=web
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //    webView.delegate = self;
+    [webView loadRequest:request];
+    [self.view addSubview:webView];
 }
 //第二步
 - (void)gotoSetting
